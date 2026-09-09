@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para minha princesa ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f7e4e8, #efd0d8);
+            color: #49343a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 28px;
+            padding: 32px 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(70, 35, 45, 0.18);
+            animation: aparecer 1s ease;
+        }
+
+        h1 {
+            font-size: 29px;
+            margin: 0 0 18px;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 23px;
+            font-weight: normal;
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+
+        .pequeno {
+            font-size: 15px;
+            opacity: 0.75;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #955367;
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 7px 18px rgba(100, 45, 60, 0.2);
+            transition: 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #surpresa {
+            display: none;
+        }
+
+        .foto {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .mensagem {
+            text-align: left;
+        }
+
+        .assinatura {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 19px;
+        }
+
+        .coracao {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            pointer-events: none;
+            animation: subir 5s linear forwards;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- PRIMEIRA TELA -->
+
+        <div class="card" id="inicio">
+
+            <h1>Oi, princesa ❤️</h1>
+
+            <p>
+                Eu sei que seu dia está difícil...
+            </p>
+
+            <p>
+                E talvez você nem esteja precisando de mais palavras agora.
+                Mas eu queria te lembrar de uma coisa.
+            </p>
+
+            <p class="pequeno">
+                Prometo que é rapidinho.
+            </p>
+
+            <button onclick="abrirMensagem()">
+                Aperta aqui ❤️
+            </button>
+
+        </div>
+
+
+        <!-- SEGUNDA TELA -->
+
+        <div class="card" id="surpresa">
+
+            <img src="foto.jpg" class="foto" alt="Nós dois ❤️">
+
+            <div class="mensagem">
+
+                <p>
+                    Talvez hoje você não consiga enxergar isso,
+                    mas você é uma pessoa incrível.
+                </p>
+
+                <p>
+                    Você é forte. Mesmo quando sente que não é.
+                    Mesmo quando o coração pesa e parece que você
+                    não vai conseguir passar por mais um dia.
+                </p>
+
+                <p>
+                    Deus está vendo tudo o que você tem passado.
+                    Ele conhece cada lágrima, cada preocupação,
+                    cada pensamento que você guarda e até aquilo
+                    que você não consegue explicar para ninguém.
+                </p>
+
+                <p>
+                    E eu sei que às vezes você não consegue reconhecer
+                    o quanto é importante, o quanto é amada e o quanto
+                    existe de bonito em você.
+                </p>
+
+                <p>
+                    Por isso eu queria te lembrar:
+                    não deixe um dia difícil fazer você esquecer
+                    quem você é.
+                </p>
+
+                <p>
+                    Você continua sendo essa mulher incrível,
+                    de coração lindo, de fé e de força.
+                </p>
+
+                <p>
+                    E acima de tudo, lembra que você não está sozinha.
+                    Deus continua cuidando de você, mesmo quando
+                    você não consegue perceber.
+                </p>
+
+                <p>
+                    E eu estou aqui também.
+                    Para te ouvir, te abraçar, rir com você
+                    e caminhar ao seu lado.
+                </p>
+
+                <h2>
+                    Eu amo você. ❤️
+                </h2>
+
+                <p class="assinatura">
+                    Que seu coração descanse nEle hoje.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function abrirMensagem() {
+
+            document.getElementById("inicio").style.display = "none";
+
+            document.getElementById("surpresa").style.display = "block";
+
+            criarCoracoes();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+
+        function criarCoracoes() {
+
+            for (let i = 0; i < 20; i++) {
+
+                setTimeout(function() {
+
+                    const coracao = document.createElement("div");
+
+                    coracao.className = "coracao";
+
+                    coracao.innerHTML = "❤️";
+
+                    coracao.style.left =
+                        Math.random() * 100 + "vw";
+
+                    coracao.style.animationDuration =
+                        (Math.random() * 2 + 4) + "s";
+
+                    document.body.appendChild(coracao);
+
+                    setTimeout(function() {
+                        coracao.remove();
+                    }, 6000);
+
+                }, i * 100);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
