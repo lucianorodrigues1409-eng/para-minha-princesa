@@ -116,7 +116,7 @@
             box-shadow: none;
             border: 1px solid #955367;
         }
-        /* VISUALIZADOR DA FOTO */
+        /* VISUALIZADOR */
         #visualizador {
             display: none;
             position: fixed;
@@ -254,7 +254,7 @@
                     Que seu coração descanse nEle hoje.
                 </p>
             </div>
-            <!-- BOTÃO PARA A GALERIA -->
+            <!-- BOTÃO DA GALERIA -->
             <button onclick="abrirFotos()">
                 Nossas fotos ❤️
             </button>
@@ -273,15 +273,15 @@
                      alt="Nós dois ❤️"
                      onclick="abrirFoto(this.src)">
                 <!-- FOTO 2 -->
-                <img src="foto2.jpg.heic"
+                <img src="foto2.jpg.HEIC"
                      alt="Nosso momento ❤️"
                      onclick="abrirFoto(this.src)">
                 <!-- FOTO 3 -->
-                <img src="foto3.jpg.heic"
+                <img src="foto 3.jpg.HEIC"
                      alt="Nosso momento ❤️"
                      onclick="abrirFoto(this.src)">
                 <!-- FOTO 4 -->
-                <img src="foto4.jpg.heic"
+                <img src="foto4.jpg.HEIC"
                      alt="Nosso momento ❤️"
                      onclick="abrirFoto(this.src)">
             </div>
@@ -290,12 +290,14 @@
             </button>
         </div>
     </div>
-    <!-- VISUALIZADOR DE FOTOS -->
+    <!-- VISUALIZADOR DA FOTO -->
     <div id="visualizador">
         <button class="fechar" onclick="fecharFoto()">
             ×
         </button>
-        <img id="fotoGrande" src="" alt="Foto ampliada">
+        <img id="fotoGrande"
+             src=""
+             alt="Foto ampliada">
     </div>
     <script>
         function abrirMensagem() {
