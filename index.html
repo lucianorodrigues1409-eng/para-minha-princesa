@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>para minha princesa ❤️</title>
+    <title>Para minha princesa ❤️</title>
 
+    <!-- Ícone do site -->
     <link rel="icon" href="logo.png.heic">
     <link rel="apple-touch-icon" href="logo.png.heic">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="minha princesa">
+    <meta name="apple-mobile-web-app-title" content="Minha Princesa">
 
     <style>
         * {
@@ -23,7 +24,7 @@
             justify-content: center;
             align-items: center;
             padding: 25px;
-            font-family: georgia, 'times new roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             background: linear-gradient(135deg, #f7e4e8, #efd0d8);
             color: #49343a;
             overflow-x: hidden;
@@ -120,18 +121,18 @@
         @keyframes aparecer {
             from {
                 opacity: 0;
-                transform: translatey(15px);
+                transform: translateY(15px);
             }
 
             to {
                 opacity: 1;
-                transform: translatey(0);
+                transform: translateY(0);
             }
         }
 
         @keyframes subir {
             0% {
-                transform: translatey(0);
+                transform: translateY(0);
                 opacity: 0;
             }
 
@@ -140,7 +141,7 @@
             }
 
             100% {
-                transform: translatey(-110vh);
+                transform: translateY(-110vh);
                 opacity: 0;
             }
         }
@@ -151,93 +152,94 @@
 
     <div class="container">
 
-        <!-- primeira tela -->
+        <!-- PRIMEIRA TELA -->
 
         <div class="card" id="inicio">
 
-            <h1>oi, princesa ❤️</h1>
+            <h1>Oi, princesa ❤️</h1>
 
             <p>
-                eu sei que seu dia está difícil...
+                Eu sei que seu dia está difícil...
             </p>
 
             <p>
-                e talvez você nem esteja precisando de mais palavras agora.
-                mas eu queria te lembrar de uma coisa.
+                E talvez você nem esteja precisando de mais palavras agora.
+                Mas eu queria te lembrar de uma coisa.
             </p>
 
             <p class="pequeno">
-                prometo que é rapidinho.
+                Prometo que é rapidinho.
             </p>
 
-            <button onclick="abrirmensagem()">
-                aperta aqui ❤️
+            <button onclick="abrirMensagem()">
+                Aperta aqui ❤️
             </button>
 
         </div>
 
-        <!-- segunda tela -->
+
+        <!-- SEGUNDA TELA -->
 
         <div class="card" id="surpresa">
 
-            <!-- foto -->
-            <img src="foto.jpg.heic" class="foto" alt="nós dois ❤️">
+            <!-- FOTO -->
+            <img src="foto.jpg.HEIC" class="foto" alt="Nós dois ❤️">
 
             <div class="mensagem">
 
                 <p>
-                    talvez hoje você não consiga enxergar isso,
+                    Talvez hoje você não consiga enxergar isso,
                     mas você é uma pessoa incrível.
                 </p>
 
                 <p>
-                    você é forte. mesmo quando sente que não é.
-                    mesmo quando o coração pesa e parece que você
+                    Você é forte. Mesmo quando sente que não é.
+                    Mesmo quando o coração pesa e parece que você
                     não vai conseguir passar por mais um dia.
                 </p>
 
                 <p>
-                    deus está vendo tudo o que você tem passado.
-                    ele conhece cada lágrima, cada preocupação,
+                    Deus está vendo tudo o que você tem passado.
+                    Ele conhece cada lágrima, cada preocupação,
                     cada pensamento que você guarda e até aquilo
                     que você não consegue explicar para ninguém.
                 </p>
 
                 <p>
-                    e eu sei que às vezes você não consegue reconhecer
+                    E eu sei que às vezes você não consegue reconhecer
                     o quanto é importante, o quanto é amada e o quanto
                     existe de bonito em você.
                 </p>
 
                 <p>
-                    por isso eu queria te lembrar:
+                    Por isso eu queria te lembrar:
                     não deixe um dia difícil fazer você esquecer
                     quem você é.
                 </p>
 
                 <p>
-                    você continua sendo essa mulher incrível,
+                    Você continua sendo essa mulher incrível,
                     de coração lindo, de fé e de força.
                 </p>
 
                 <p>
-                    e acima de tudo, lembra que você não está sozinha.
-                    deus continua cuidando de você, mesmo quando
+                    E acima de tudo, lembra que você não está sozinha.
+                    Deus continua cuidando de você, mesmo quando
                     você não consegue perceber.
                 </p>
 
                 <p>
-                    e eu estou aqui também.
-                    para te ouvir, te abraçar, rir com você
+                    E eu estou aqui também.
+                    Para te ouvir, te abraçar, rir com você
                     e caminhar ao seu lado.
                 </p>
 
                 <h2>
-                    eu amo você. ❤️
+                    Eu amo você. ❤️
                 </h2>
 
                 <p class="assinatura">
-                    que seu coração descanse nele hoje.
+                    Que seu coração descanse nEle hoje.
                 </p>
 
             </div>
@@ -246,43 +248,45 @@
 
     </div>
 
+
     <script>
 
-        function abrirmensagem() {
+        function abrirMensagem() {
 
             document.getElementById("inicio").style.display = "none";
 
             document.getElementById("surpresa").style.display = "block";
 
-            criarcoracoes();
+            criarCoracoes();
 
-            window.scrollto({
+            window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         }
 
-        function criarcoracoes() {
+
+        function criarCoracoes() {
 
             for (let i = 0; i < 20; i++) {
 
-                settimeout(function() {
+                setTimeout(function() {
 
                     const coracao = document.createElement("div");
 
                     coracao.className = "coracao";
 
-                    coracao.innerhtml = "❤️";
+                    coracao.innerHTML = "❤️";
 
                     coracao.style.left =
-                        math.random() * 100 + "vw";
+                        Math.random() * 100 + "vw";
 
-                    coracao.style.animationduration =
-                        (math.random() * 2 + 4) + "s";
+                    coracao.style.animationDuration =
+                        (Math.random() * 2 + 4) + "s";
 
-                    document.body.appendchild(coracao);
+                    document.body.appendChild(coracao);
 
-                    settimeout(function() {
+                    setTimeout(function() {
                         coracao.remove();
                     }, 6000);
 
